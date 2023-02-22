@@ -1,4 +1,4 @@
-@US01_UI @medunna_team84   @Wip
+@US01_UI @medunna_team84
 Feature: US01_Registration_should_be_available_using SSN_firstname_and_lastname_feature
 
   Background: set_up
@@ -21,19 +21,19 @@ Feature: US01_Registration_should_be_available_using SSN_firstname_and_lastname_
       | 890-12-4567 |
       | 345-67-0001 |
 
-#  @US01_TestCase2
-#  Scenario Outline: US1_TC2_invalid_ssn_feature
-#    Then  user provides invalid ssn "<ssn>" number
-#    Then user should see the error message Your SSN is invalid
-#
-#    Examples: ssn
-#      | ssn         |
-#      | 12345-6789  |
-#      | 234561234   |
-#      | 002         |
-#      | 990-1-24567 |
-#      | 34567-0001  |
-#
+  @US01_TestCase2 @Wip
+  Scenario Outline: US1_TC2_invalid_ssn_feature
+    Then  user provides invalid ssn "<ssn>" number
+    Then user should see the error message Your SSN is invalid
+
+    Examples: ssn
+      | ssn         |
+      | 12345-6789  |
+      | 234561234   |
+      | 002         |
+      | 990-1-24567 |
+      | 34567-0001  |
+
 #  @US01_TestCase3
 #  Scenario: US1_TC3_blank_ssn_feature
 #    Then  user leaves ssn box blank
