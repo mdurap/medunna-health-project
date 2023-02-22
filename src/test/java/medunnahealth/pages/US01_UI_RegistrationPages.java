@@ -18,4 +18,10 @@ public class US01_UI_RegistrationPages {
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement registerButton;
 
+    @FindBy(id = "ssn")
+    public WebElement ssnBox;
+
+    @FindBy(xpath = "//div[@class=\"invalid-feedback\"]")
+    public WebElement ssnMessage;
+
 }
