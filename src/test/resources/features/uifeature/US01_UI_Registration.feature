@@ -15,11 +15,11 @@ Feature: US01_Registration_should_be_available_using SSN_firstname_and_lastname_
 
     Examples: ssn
       | ssn         |
-     | 123-45-6789 |
-#      | 234-56-1234 |
-#      | 002-23-4532 |
-#      | 890-12-4567 |
-#      | 345-67-0001 |
+      | 123-45-6789 |
+      | 234-56-1234 |
+      | 002-23-4532 |
+      | 890-12-4567 |
+      | 345-67-0001 |
 
 #  @US01_TestCase2
 #  Scenario Outline: US1_TC2_invalid_ssn_feature
