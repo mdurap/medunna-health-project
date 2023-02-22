@@ -6,6 +6,7 @@ import medunnahealth.pages.US01_UI_RegistrationPages;
 import medunnahealth.utilities.ConfigurationReader;
 import medunnahealth.utilities.Driver;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 
 public class US01_UI_StepDef {
@@ -61,6 +62,15 @@ public class US01_UI_StepDef {
         Assert.assertFalse(ssnBoxAttribute.contains("invalid"));
         Assert.assertTrue(ssnBoxAttribute.contains("valid"));
 
+    }
+
+    @Then("user provides invalid ssn {string} number")
+    public void user_provides_invalid_ssn_number(String ssnInvalid) {
+        us01UiRegistrationPages.ssnBox.sendKeys(ssnInvalid+ Keys.ENTER);
+    }
+    @Then("user should see the error message Your SSN is invalid")
+    public void user_should_see_the_error_message_your_ssn_is_invalid() {
+        Assert.assertTrue(us01UiRegistrationPages.ssnMessage.isDisplayed());
     }
 
 }
