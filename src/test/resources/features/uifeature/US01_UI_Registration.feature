@@ -1,14 +1,14 @@
-@US01_UI @medunna_team84
+@US01_UI @Medunna_team6 @Wip
 Feature: US01_Registration_should_be_available_using SSN_firstname_and_lastname_feature
 
   Background: set_up
     Given  user navigates to Medunna url
-    And user click the registration ikon
+    And user click the registration icon
     And user click registration button
 
 
-  @US01_TestCase1 @smoke
-  Scenario Outline: US1_TC1_valid_ssn_feature
+  @US01_TC01
+  Scenario Outline: US01_TC01_valid_ssn_feature
 
     Then  user provides valid ssn "<ssn>" number
     Then user should not see the error message Your SSN is required or Your SSN is invalid
@@ -16,62 +16,62 @@ Feature: US01_Registration_should_be_available_using SSN_firstname_and_lastname_
     Examples: ssn
       | ssn         |
       | 123-45-6789 |
-      | 234-56-1234 |
-      | 002-23-4532 |
-      | 890-12-4567 |
-      | 345-67-0001 |
+      | 234-56-7891 |
+      | 020-33-9876 |
+      | 150-68-7575 |
+      | 654-67-0001 |
 
-  @US01_TestCase2 @Wip
-  Scenario Outline: US1_TC2_invalid_ssn_feature
+  @US01_TC02
+  Scenario Outline: US01_TC02_invalid_ssn_feature
     Then  user provides invalid ssn "<ssn>" number
     Then user should see the error message Your SSN is invalid
 
     Examples: ssn
       | ssn         |
-      | 12345-6789  |
-      | 234561234   |
-      | 002         |
-      | 990-1-24567 |
-      | 34567-0001  |
+      | 123456789   |
+      | 5678-9-1234 |
+      | 000         |
+      | 666-2-6548  |
+      | 11-22-0001  |
 
-#  @US01_TestCase3
-#  Scenario: US1_TC3_blank_ssn_feature
-#    Then  user leaves ssn box blank
-#    Then user should see the error message Your SSN is required.
-#
-#  @US01_TestCase4
-#  Scenario Outline: US1_TC4_valid_firstname_feature
-#    Then  user provides valid firstname "<firstname>" that contains any chars
-#    Then user should not see the error message Your FirstName is required.
-#
-#    Examples: ssn
-#      | firstname   |
-#      | Osman       |
-#      | 234         |
-#      | ?           |
-#      | ###         |
-#      | 345-67-0001 |
-#
-#  @US01_TestCase5
-#  Scenario: US1_TC5_blank_firstname_feature
-#    Then  user leaves firstname box blank
-#    Then user should see the error message Your FirstName is required.
-#
-#  @US01_TestCase6
-#  Scenario Outline: US1_TC6_valid_lastname_feature
-#    Then  user provides valid lastname "<lastname>" that contains any chars
-#    Then user should not see the error message Your LastName is required.
-#
-#    Examples: ssn
-#      | lastname    |
-#      | Sayli       |
-#      | 234         |
-#      | ?           |
-#      | ###         |
-#      | 345-67-0001 |
-#
-#
-#  @US01_TestCase7
-#  Scenario: US1_TC7_blank_lastname_feature
-#    Then  user leaves lastname box blank
-#    Then user should see the error message Your LastName is required.
+  @US01_TC03
+  Scenario: US01_TC03_blank_ssn_feature
+    Then  user leaves ssn box blank
+    Then user should see the error message Your SSN is required.
+
+  @US01_TC04
+  Scenario Outline: US01_TC04_valid_firstname_feature
+    Then  user provides valid firstname "<firstname>" that contains any chars
+    Then user should not see the error message Your FirstName is required.
+
+    Examples: ssn
+      | firstname   |
+      | John        |
+      | 756         |
+      | ?/! #       |
+      | ,           |
+      | 123-45-6789 |
+
+  @US01_TC05
+  Scenario: US01_TC05_blank_firstname_feature
+    Then  user leaves firstname box blank
+    Then user should see the error message Your FirstName is required.
+
+  @US01_TC06
+  Scenario Outline: US01_TC06_valid_lastname_feature
+    Then  user provides valid lastname "<lastname>" that contains any chars
+    Then user should not see the error message Your LastName is required.
+
+    Examples: ssn
+      | lastname    |
+      | Doe         |
+      | 911         |
+      | !!          |
+      |      (:)    |
+      | 987-65-4321 |
+
+
+  @US01_TC07
+  Scenario: US01_TC07_blank_lastname_feature
+    Then  user leaves lastname box blank
+    Then user should see the error message Your LastName is required.
