@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
         tags = "",
         dryRun = false
 )
-public class FaildScenarioRunner {
+public class FailedScenarioRunner {
 
 
 }
