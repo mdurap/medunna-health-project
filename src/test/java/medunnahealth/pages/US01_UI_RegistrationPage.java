@@ -40,5 +40,4 @@ public class US01_UI_RegistrationPage {
     public WebElement lastNameIsRequiredMessage;
 
 
-
 }
